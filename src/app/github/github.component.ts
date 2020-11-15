@@ -22,7 +22,18 @@ username: string;
       this.repos = repos;
     });
 
-   }
+  }
+
+  getUserProfile(){
+    this.githubService.updateUserProfile(this.username);
+    this.githubService.getProfileInformation().subscribe(profile => {
+      this.profile = profile;
+    });
+  
+    this.githubService.getProfileRepos().subscribe(repos =>{
+      this.repos = repos;
+    });
+  }
 
   ngOnInit(): void {
   }
