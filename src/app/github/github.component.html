@@ -4,3 +4,14 @@
       [(ngModel)]="username" name="username" (keypress)="getUserProfile()">
     </form>
 </div>
+
+<div class="user-profile">
+    <div *ngIf = "profile">
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="{{profile.avatar_url}}"  class="Profile_picture" alt="img1">
+            </div>
+        </div>
+
+    </div>
+</div>
