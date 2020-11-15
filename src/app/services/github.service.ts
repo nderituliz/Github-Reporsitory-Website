@@ -17,4 +17,7 @@ export class GithubService {
   getProfileRepos(){
     return this.http.get(`https://api.github.com/users/${this.username}/repos?access_token=${environment.apiKey}`)
   }
+  updateUserProfile(username:string){
+    this.username = username;
+  }
 }
