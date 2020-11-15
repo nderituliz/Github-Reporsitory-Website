@@ -53,5 +53,15 @@
         <h4><b>Repositories</b></h4>
     </div>
 
+    <div *ngFor="let repo of repos">
+        <div class="row">
+            <div class="column">
+                <p>
+                    {{repo.name}} <a href="{{repo.html_url}}" class="btn btn-danger" target="_blank">View the Repo on GitHub</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
     
 </div>
