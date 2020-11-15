@@ -14,4 +14,7 @@ export class GithubService {
   getProfileInformation(){
     return this.http.get(`https://api.github.com/users/${this.username}?access_token=${environment.apiKey}`)
   }
+  getProfileRepos(){
+    return this.http.get(`https://api.github.com/users/${this.username}/repos?access_token=${environment.apiKey}`)
+  }
 }
