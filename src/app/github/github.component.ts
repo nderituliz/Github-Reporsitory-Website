@@ -36,6 +36,8 @@ username: string;
   }
 
   ngOnInit(): void {
+  this.githubService.updateUserProfile('nderituliz');
+  this.githubService.getProfileInformation().subscribe(profile => this.profile = profile);
   }
 
 }
